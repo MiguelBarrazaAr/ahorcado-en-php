@@ -11,8 +11,12 @@ $_SESSION["palabra"] = $elegido;
 }
 
 $cantidad = strlen($palabra);
-print("la palabra tiene: $cantidad  caracteres");
+print("la palabra tiene: $cantidad  caracteres<br>");
 
+if($_POST) {
+$letra = $_POST["letra"];
+print("escribiste la letra $letra<br>");
+}
 ?>
 
 <form action="" method="post">
