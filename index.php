@@ -1,12 +1,6 @@
 <?php
 session_start();
-
-function elegirPalabra() {
-$palabras = ["arbol", "casa", "mundo", "oro"];
-$x = rand(0,count($palabras)-1);
-return $palabras[$x];
-}
-
+include("elegir.php");
 
 
 if(isset($_SESSION["palabra"])) {
