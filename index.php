@@ -4,13 +4,21 @@ include("elegir.php");
 
 
 if(isset($_SESSION["palabra"])) {
-$elegido = $_SESSION["palabra"];
-print("su palabra es: $elegido");
+$palabra = $_SESSION["palabra"];
 } else {
-$elegido = elegirPalabra();
-print("no existe, entonces elijo: $elegido");
+$palabra = elegirPalabra();
 $_SESSION["palabra"] = $elegido;
 }
 
+$cantidad = strlen($palabra);
+print("la palabra tiene: $cantidad  caracteres");
 
 ?>
+
+<form action="" method="post">
+<p>escriba una letra</p>
+<label>letra:
+<input type="text" name="letra">
+</label>
+<input type="submit" value="probar">
+</form>
